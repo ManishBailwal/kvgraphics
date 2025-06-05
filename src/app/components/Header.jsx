@@ -2,26 +2,23 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="w-full bg-[#0a1a2f] text-[#f5f5dc] shadow-md fixed top-0 left-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
-        {/* Logo with Stylized Badge */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-24">
+        {/* Logo as Image */}
         <Link href="/" className="flex items-center gap-2">
-          {/* Logo Circle with 'KV' */}
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#ff6b6b] via-[#ff9671] to-[#ffc75f] text-white font-semibold tracking-wide shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center shadow-md">
-            <span className="text-white font-bold text-lg" style={{ fontFamily: 'Georgia, serif' }}>
-              KV
-            </span>
-          </div>
-
-          {/* Brand Name */}
-          <span className="text-2xl font-bold tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
-            Graphics
-          </span>
+          <Image
+            src="/assets/logo.png"
+            alt="KV Graphics Logo"
+            width={80}
+            height={80}
+            className="object-contain w-64 h-64"
+          />
         </Link>
 
         {/* Desktop Navigation */}
