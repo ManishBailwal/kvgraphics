@@ -23,8 +23,8 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 text-sm font-medium" style={{ fontFamily: 'system-ui' }}>
-          <Link href="#home" className="hover:text-[#b76e79] transition-colors">Home</Link>
-          <Link href="#services" className="hover:text-[#b76e79] transition-colors">Services</Link>
+          <Link href="home" className="hover:text-[#b76e79] transition-colors">Home</Link>
+          <Link href="services" className="hover:text-[#b76e79] transition-colors">Services</Link>
           <Link href="#portfolio" className="hover:text-[#b76e79] transition-colors">Portfolio</Link>
           <Link href="#contact" className="hover:text-[#b76e79] transition-colors">Contact</Link>
         </nav>
