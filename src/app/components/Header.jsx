@@ -26,7 +26,7 @@ export default function Header() {
           <Link href="home" className="hover:text-[#b76e79] transition-colors">Home</Link>
           <Link href="services" className="hover:text-[#b76e79] transition-colors">Services</Link>
           <Link href="#portfolio" className="hover:text-[#b76e79] transition-colors">Portfolio</Link>
-          <Link href="#contact" className="hover:text-[#b76e79] transition-colors">Contact</Link>
+          <Link href="contact" className="hover:text-[#b76e79] transition-colors">Contact</Link>
         </nav>
 
         {/* Mobile Menu Icon */}
@@ -40,10 +40,10 @@ export default function Header() {
       {/* Mobile Navigation Menu */}
       {isOpen && (
         <div className="md:hidden px-6 pb-4 bg-[#0a1a2f] flex flex-col gap-4 text-sm font-medium" style={{ fontFamily: 'system-ui' }}>
-          <Link href="#home" className="hover:text-[#b76e79] transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link href="home" className="hover:text-[#b76e79] transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
           <Link href="#services" className="hover:text-[#b76e79] transition-colors" onClick={() => setIsOpen(false)}>Services</Link>
           <Link href="#portfolio" className="hover:text-[#b76e79] transition-colors" onClick={() => setIsOpen(false)}>Portfolio</Link>
-          <Link href="#contact" className="hover:text-[#b76e79] transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link href="contact" className="hover:text-[#b76e79] transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       )}
     </header>
