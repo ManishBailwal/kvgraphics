@@ -1,3 +1,5 @@
+// ServicesPage.jsx
+
 'use client';
 import { motion } from 'framer-motion';
 
@@ -22,7 +24,7 @@ const services = {
 
 export default function ServicesPage() {
   return (
-    <main className="bg-black text-white min-h-screen py-20 px-6 md:px-20">
+    <main className="bg-white text-black min-h-screen py-20 px-6 md:px-20">
       <div className="max-w-7xl mx-auto text-center">
         {/* Header */}
         <motion.h1
@@ -35,7 +37,7 @@ export default function ServicesPage() {
         </motion.h1>
 
         <motion.p
-          className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto"
+          className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -47,8 +49,8 @@ export default function ServicesPage() {
         <div className="grid md:grid-cols-3 gap-10 text-left">
           {/* Digital Services */}
           <div>
-            <h3 className="text-xl font-semibold mb-3 text-yellow-400">Digital Services</h3>
-            <ul className="space-y-2 text-gray-200">
+            <h3 className="text-xl font-semibold mb-3 text-yellow-600">Digital Services</h3>
+            <ul className="space-y-2 text-gray-800">
               {services.main.map((service, idx) => (
                 <li key={idx}>• {service}</li>
               ))}
@@ -57,8 +59,8 @@ export default function ServicesPage() {
 
           {/* Printing & Design */}
           <div>
-            <h3 className="text-xl font-semibold mb-3 text-yellow-400">Printing & Design</h3>
-            <ul className="space-y-2 text-gray-200">
+            <h3 className="text-xl font-semibold mb-3 text-yellow-600">Printing & Design</h3>
+            <ul className="space-y-2 text-gray-800">
               {services.print.map((service, idx) => (
                 <li key={idx}>• {service}</li>
               ))}
@@ -67,8 +69,8 @@ export default function ServicesPage() {
 
           {/* Merchandise & Boards */}
           <div>
-            <h3 className="text-xl font-semibold mb-3 text-yellow-400">Merchandise & Boards</h3>
-            <ul className="space-y-2 text-gray-200">
+            <h3 className="text-xl font-semibold mb-3 text-yellow-600">Merchandise & Boards</h3>
+            <ul className="space-y-2 text-gray-800">
               {[...services.merchandise, ...services.boards].map((service, idx) => (
                 <li key={idx}>• {service}</li>
               ))}

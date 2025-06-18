@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a1a2f] text-[#f5f5dc] py-10 px-6 border-t border-[#1e2e44]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        {/* Logo/Brand */}
+    <footer className="bg-white text-[#111] py-12 px-6 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+        {/* Brand/Logo Section */}
         <div>
-          <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Georgia, serif' }}>
-            PixelCraft
+          <h2 className="text-2xl font-bold mb-3 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
+            KV Graphics
           </h2>
-          <p className="text-sm text-[#d2c8b0] leading-relaxed">
+          <p className="text-sm text-gray-600 leading-relaxed max-w-xs mx-auto md:mx-0" style={{ fontFamily: 'system-ui' }}>
             Where aesthetics meet precision. <br />
             Tailored designs that leave lasting impressions.
           </p>
@@ -19,37 +19,63 @@ export default function Footer() {
 
         {/* Navigation Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-sm text-[#e0d5c0]">
-            <li><Link href="#home" className="hover:text-[#b76e79] transition">Home</Link></li>
-            <li><Link href="#services" className="hover:text-[#b76e79] transition">Services</Link></li>
-            <li><Link href="#portfolio" className="hover:text-[#b76e79] transition">Portfolio</Link></li>
-            <li><Link href="#contact" className="hover:text-[#b76e79] transition">Contact</Link></li>
+          <h3 className="text-lg font-semibold mb-4 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
+            Quick Links
+          </h3>
+          <ul className="space-y-2 text-sm text-gray-700" style={{ fontFamily: 'system-ui' }}>
+            <li><Link href="#home" className="hover:text-[#d4af37] transition-colors">Home</Link></li>
+            <li><Link href="#services" className="hover:text-[#d4af37] transition-colors">Services</Link></li>
+            <li><Link href="#portfolio" className="hover:text-[#d4af37] transition-colors">Portfolio</Link></li>
+            <li><Link href="#contact" className="hover:text-[#d4af37] transition-colors">Contact</Link></li>
           </ul>
         </div>
 
-        {/* Social Media */}
+        {/* Social Media Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Connect</h3>
-          <div className="flex justify-center md:justify-start gap-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-[#b76e79]">
+          <h3 className="text-lg font-semibold mb-4 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
+            Connect
+          </h3>
+          <div className="flex justify-center md:justify-start gap-5 text-gray-700">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="hover:text-[#d4af37] transition-colors"
+            >
               <Facebook size={20} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-[#b76e79]">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              className="hover:text-[#d4af37] transition-colors"
+            >
               <Twitter size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#b76e79]">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:text-[#d4af37] transition-colors"
+            >
               <Linkedin size={20} />
             </a>
-            <a href="mailto:hello@pixelcraft.com" aria-label="Email" className="hover:text-[#b76e79]">
+            <a
+              href="mailto:hello@pixelcraft.com"
+              aria-label="Email"
+              className="hover:text-[#d4af37] transition-colors"
+            >
               <Mail size={20} />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Bottom Note */}
-      <div className="mt-10 text-center text-xs text-[#a9a9a9]">
+      {/* Copyright */}
+      <div className="mt-10 text-center text-xs text-gray-500 tracking-wide" style={{ fontFamily: 'system-ui' }}>
         © {new Date().getFullYear()} PixelCraft. All rights reserved.
       </div>
     </footer>
