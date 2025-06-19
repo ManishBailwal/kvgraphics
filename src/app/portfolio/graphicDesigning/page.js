@@ -13,11 +13,15 @@ const designs = [
   { title: 'Minimal Logo Design', description: 'A clean and modern logo crafted for a tech startup.', image: '/assets/7.png' },
   { title: 'Event Poster', description: 'Vibrant poster design for marketing events and concerts.', image: '/assets/8.png' },
   { title: 'Product Brochure', description: 'Well-structured, sleek brochure for product showcase.', image: '/assets/9.png' },
+  { title: 'Minimal Logo Design', description: 'A clean and modern logo crafted for a tech startup.', image: '/assets/13.png' },
+  { title: 'Event Poster', description: 'Vibrant poster design for marketing events and concerts.', image: '/assets/14.png' },
+  { title: 'Product Brochure', description: 'Well-structured, sleek brochure for product showcase.', image: '/assets/15.png' },
+
   { title: 'Minimal Logo Design', description: 'A clean and modern logo crafted for a tech startup.', image: '/assets/10.png' },
   { title: 'Event Poster', description: 'Vibrant poster design for marketing events and concerts.', image: '/assets/11.png' },
   { title: 'Product Brochure', description: 'Well-structured, sleek brochure for product showcase.', image: '/assets/12.png' },
+  
 ];
-
 export default function GraphicDesigning() {
   const [selectedImage, setSelectedImage] = useState(null);
 
