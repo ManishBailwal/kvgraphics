@@ -7,13 +7,13 @@ const portfolioItems = [
     title: 'Website Portfolio',
     description: 'Custom websites built with speed, design, and functionality in mind. From landing pages to full-stack applications.',
     icon: '🌐',
-    link: '/portfolio/website',
+    link: '/portfolio/websites',
   },
   {
     title: 'Graphic Designing Portfolio',
     description: 'Premium designs including logos, posters, brochures, and brand kits tailored to your business needs.',
     icon: '🎨',
-    link: '/portfolio/graphic-design',
+    link: '/portfolio/graphicDesigning',
   },
   {
     title: 'Printing Portfolio',
