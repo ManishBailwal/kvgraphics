@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const designs = [
   { title: 'Minimal Logo Design', description: 'A clean and modern logo crafted for a tech startup.', image: '/assets/1.png' },
@@ -16,12 +17,11 @@ const designs = [
   { title: 'Minimal Logo Design', description: 'A clean and modern logo crafted for a tech startup.', image: '/assets/13.png' },
   { title: 'Event Poster', description: 'Vibrant poster design for marketing events and concerts.', image: '/assets/14.png' },
   { title: 'Product Brochure', description: 'Well-structured, sleek brochure for product showcase.', image: '/assets/15.png' },
-
   { title: 'Minimal Logo Design', description: 'A clean and modern logo crafted for a tech startup.', image: '/assets/10.png' },
   { title: 'Event Poster', description: 'Vibrant poster design for marketing events and concerts.', image: '/assets/11.png' },
   { title: 'Product Brochure', description: 'Well-structured, sleek brochure for product showcase.', image: '/assets/12.png' },
-  
 ];
+
 export default function GraphicDesigning() {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -56,11 +56,15 @@ export default function GraphicDesigning() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.4 }}
             >
-              <img
-                src={design.image}
-                alt={design.title}
-                className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+              <div className="w-full h-60 relative">
+                <Image
+                  src={design.image}
+                  alt={design.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="group-hover:scale-105 transition-transform duration-300 rounded-t-xl"
+                />
+              </div>
               <div className="p-5 flex flex-col justify-between flex-1">
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-yellow-600">{design.title}</h3>
@@ -84,17 +88,23 @@ export default function GraphicDesigning() {
           className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
           onClick={() => setSelectedImage(null)}
         >
-          <img
-            src={selectedImage}
-            alt="Full Design"
-            className="max-w-full max-h-[90vh] rounded-lg shadow-2xl border-4 border-white"
-          />
-          <button
-            className="absolute top-6 right-6 text-white text-3xl font-bold bg-black bg-opacity-50 rounded-full px-4 py-1"
-            onClick={() => setSelectedImage(null)}
-          >
-            &times;
-          </button>
+          <div className="relative max-w-full max-h-[90vh]">
+            <Image
+              src={selectedImage}
+              alt="Full Design"
+              layout="intrinsic"
+              width={1000}
+              height={1000}
+              objectFit="contain"
+              className="rounded-lg shadow-2xl border-4 border-white"
+            />
+            <button
+              className="absolute top-[-40px] right-[-10px] text-white text-3xl font-bold bg-black bg-opacity-60 rounded-full px-4 py-1"
+              onClick={() => setSelectedImage(null)}
+            >
+              &times;
+            </button>
+          </div>
         </div>
       )}
     </section>

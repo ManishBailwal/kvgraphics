@@ -2,6 +2,12 @@
 import { motion } from 'framer-motion';
 
 export default function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Future: connect to backend or email service
+    alert("Message sent!");
+  };
+
   return (
     <section className="bg-white text-black px-6 md:px-20 py-24">
       <div className="max-w-4xl mx-auto">
@@ -13,7 +19,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Let's Connect
+          Let&rsquo;s Connect
         </motion.h2>
 
         <motion.p
@@ -23,11 +29,12 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Have a project in mind or just want to say hello? We’d love to hear from you.
+          Have a project in mind or just want to say hello? We&rsquo;d love to hear from you.
         </motion.p>
 
         {/* Contact Form */}
         <motion.form
+          onSubmit={handleSubmit}
           className="grid grid-cols-1 gap-6 bg-gray-50 p-10 rounded-2xl shadow-xl border border-gray-200"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
